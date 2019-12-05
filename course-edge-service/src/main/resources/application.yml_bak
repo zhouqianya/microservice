@@ -1,0 +1,11 @@
+server:
+  port: 8666
+
+spring:
+  dubbo:
+    application:
+      name: course-servie
+    register:
+      address: zookeeper://192.168.1.172:2181
+    scan: com.zhou.course
+

@@ -1,0 +1,25 @@
+server:
+  port: 8222
+  name: user-edge-service
+
+thrift:
+  user:
+    ip: 127.0.0.1
+    port: 8111
+  message:
+    ip: 127.0.0.1
+    port: 8444
+
+spring:
+  redis:
+    host: localhost
+    password:
+    port: 6379
+# 【 thymeleaf写了配置报错 】
+#  thymeleaf:
+#    prefix: classpath:/templates
+#    suffix: .html
+#    mode: LEGACYHTML5
+#    encoding: UTF-8
+#    cache: false
+
