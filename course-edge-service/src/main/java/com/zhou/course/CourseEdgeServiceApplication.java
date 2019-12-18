@@ -23,7 +23,7 @@ public class CourseEdgeServiceApplication {
         SpringApplication.run(CourseEdgeServiceApplication.class, args);
     }
 
-    @Bean
+//    @Bean
     public FilterRegistrationBean filterRegistrationBean() {
 
         FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();

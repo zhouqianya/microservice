@@ -20,9 +20,9 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="course-dubbo-service" options="-parameters" />
-      <module name="course-edge-service" options="-parameters" />
-      <module name="user-edge-service" options="-parameters" />
+      <module name="course-dubbo-service" options="" />
+      <module name="course-edge-service" options="" />
+      <module name="user-edge-service" options="" />
       <module name="user-thrift-service" options="" />
       <module name="zpi-gateway-zuul" options="" />
     </option>

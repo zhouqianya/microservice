@@ -24,16 +24,19 @@ import java.util.List;
 @RequestMapping("/course")
 public class CourseController {
 
-    @Reference(version = "1.0.0",timeout = 2000,url = "dubbo://localhost:20880")
+//        @Reference(timeout = 2000, url = "dubbo://127.0.0.1:20880")
+//    @Reference(version = "1.0.0", timeout = 2000)
+
+    @Reference(version = "1.0.0")
     ICourseService iCourseService;
 
 
-    @RequestMapping(value = "/courseList",method = RequestMethod.GET)
+    @RequestMapping(value = "/courseList", method = RequestMethod.GET)
     @ResponseBody
-    public List<CourseDTO> courseList(HttpServletRequest request){
-        log.info("aaaa");
-        UserDto userDto= (UserDto) request.getAttribute("user");
-        log.info(userDto.toString());
-        return  iCourseService.courseList();
+    public List<CourseDTO> courseList(HttpServletRequest request) {
+//        log.info("courseList");
+//        UserDto userDto = (UserDto) request.getAttribute("user");
+//        log.info(userDto.toString());
+        return iCourseService.courseList();
     }
 }

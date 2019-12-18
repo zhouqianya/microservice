@@ -51,6 +51,12 @@ public class UserController {
     public Response login(@RequestParam("username") String username,
                           @RequestParam("password") String password) {
 
+
+        String test = redisClient.get("a");
+
+        log.info("test={}", test);
+
+        log.info("/login method start   1");
         UserInfo userInfo = null;
         //1.
         try {
@@ -67,10 +73,17 @@ public class UserController {
         if (!userInfo.getPassword().equalsIgnoreCase(md5(password))) {
             return Response.USERNAME_PASSWORD_INVALID;
         }
+        log.info("/login method start   2");
+
         //2.生成token
         String token = genToken();
+//        String test=redisClient.get("a");
+
+        log.info("token={},test={}", token, test);
 
         redisClient.set(token, String.valueOf(userInfo.getId()), 3600);
+
+        log.info("/login method start   3");
 
 
         return new LoginResponse(token);
@@ -152,20 +165,28 @@ public class UserController {
         try {
 
             boolean result = false;
+            log.info("1");
             if (!StringUtils.isBlank(mobile)) {
                 result = serviceProvider.getMessageService().sendMobileMessage(mobile, message + code);
                 redisClient.set(mobile, code);
             } else if (!StringUtils.isBlank(email)) {
+                log.info("2");
+
                 result = serviceProvider.getMessageService().sendEmailMessage(email, message + code);
                 redisClient.set(email, code);
             } else {
+                log.info("3");
+
                 return Response.MOBILE_OR_EMAIL_REQUIRED;
             }
+            log.info("result = {}", result);
 
             if (!result) {
+
                 return Response.SEND_FAILED;
             }
         } catch (TException e) {
+            log.info(e.getMessage());
             e.printStackTrace();
             return Response.exception(e);
         }

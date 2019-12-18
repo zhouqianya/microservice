@@ -1,0 +1,5 @@
+FROM 192.168.113.161:8080/micro-service/python:3.6
+MAINTAINER zhou 469836175@qq.com
+
+RUN pip install thrift
+

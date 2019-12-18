@@ -20,3 +20,8 @@
 #API gateway 限流 验证 路由
 
 
+
+#微服务部署
+- 服务Docker化
+- Docker仓库
+- mesos swarm kubernetes

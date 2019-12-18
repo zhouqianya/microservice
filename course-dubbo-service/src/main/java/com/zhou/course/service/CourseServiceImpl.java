@@ -18,7 +18,7 @@ import java.util.List;
  * @author: 周茜
  * @create: 2019/12/04 14:16
  */
-@Service(timeout = 5000,version = "1.0.0")
+@Service
 @Slf4j
 public class CourseServiceImpl implements ICourseService {
 

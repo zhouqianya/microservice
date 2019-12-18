@@ -9,12 +9,29 @@ thrift:
   message:
     ip: 127.0.0.1
     port: 8444
+# docker 用镜像名称访问
+#thrift:
+#  user:
+#    ip: user-service
+#    port: 8111
+#  message:
+#    ip: message-service
+#    port: 8444
+
 
 spring:
   redis:
-    host: localhost
+    host: 192.168.113.161
+#redis 默认开启保护模式 不能ip访问
+#1.bind 127.0.0.1 关掉
+#2.protected-mode yes改为protected-mode no
+#    host: localhost
+
+    #    docker 参数化
+#    host: ${redis.address}
     password:
     port: 6379
+    timeout: 3000
 # 【 thymeleaf写了配置报错 】
 #  thymeleaf:
 #    prefix: classpath:/templates

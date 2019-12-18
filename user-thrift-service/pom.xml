@@ -75,6 +75,22 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<goals>repackage</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            </plugin>
         </plugins>
+
     </build>
+
+
 </project>
+
+
+<!--#      - "-redis.address=192.168.113.161"-->

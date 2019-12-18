@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="user-thrift-service-api-1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/user-thrift-service/src/main/resources/user-thrift-service-api-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,1 +1,1 @@
-__all__ = ['ttypes', 'constants', 'MessageService']
+__all__ = ['ttypes', 'constants', 'MessageService2.py']

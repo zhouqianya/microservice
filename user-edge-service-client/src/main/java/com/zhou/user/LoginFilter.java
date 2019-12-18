@@ -9,11 +9,6 @@ import com.google.common.cache.CacheBuilder;
 import com.zhou.thrift.user.dto.UserDto;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -27,8 +22,6 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.Socket;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -59,7 +52,7 @@ public abstract class LoginFilter implements Filter {
 
         String token = request.getParameter("token");
 
-        log.info("token = {}",token);
+        log.info("LoginFilter  .   token = {}",token);
 
         if (StringUtils.isBlank(token)) {
             Cookie[] cookie = request.getCookies();
@@ -83,7 +76,7 @@ public abstract class LoginFilter implements Filter {
 
         }
         if (userDto == null) {
-            response.sendRedirect("http://127.0.0.1:8222/user/login");
+            response.sendRedirect("http://192.168.113.161:8081/user/login");
             return;
         }
         login(request, response, userDto);
@@ -100,7 +93,7 @@ public abstract class LoginFilter implements Filter {
 
     private UserDto requestUserInfo(String token) {
 
-        String url = "http://127.0.0.1:8222/user/authentication";
+        String url = "http://user-edge-service:8222/user/authentication";
 
         RestTemplate restTemplate = new RestTemplate();
 

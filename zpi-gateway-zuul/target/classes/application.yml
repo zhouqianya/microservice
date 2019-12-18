@@ -1,11 +1,20 @@
 server:
-  port: 8080
+  port: 8081
 
+#zuul:
+#  routes:
+#    course:
+#      path: /course/**
+#      url: http://localhost:8666/course/
+#    user:
+#      path: /user/**
+#      url: http://localhost:8222/user/
+# docker 访问
 zuul:
   routes:
     course:
       path: /course/**
-      url: http://localhost:8666/course/
+      url: http://course-edge-service:8666/course/
     user:
       path: /user/**
-      url: http://localhost:8222/user/
+      url: http://user-edge-service:8222/user/

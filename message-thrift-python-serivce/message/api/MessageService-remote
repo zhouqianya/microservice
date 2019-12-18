@@ -9,14 +9,12 @@
 
 import sys
 import pprint
-from urlparse import urlparse
-from thrift.transport import TTransport
+# from urlparse import urlparse
 from thrift.transport import TSocket
 from thrift.transport import TSSLSocket
 from thrift.transport import THttpClient
-from thrift.protocol import TBinaryProtocol
 
-from message.api import MessageService
+from thrift import MessageService2
 from message.api.ttypes import *
 
 if len(sys.argv) <= 1 or sys.argv[1] == '--help':
@@ -79,7 +77,7 @@ else:
   else:
     transport = TTransport.TBufferedTransport(socket)
 protocol = TBinaryProtocol.TBinaryProtocol(transport)
-client = MessageService.Client(protocol)
+client = MessageService2.Client(protocol)
 transport.open()
 
 if cmd == 'sendMobileMessage':

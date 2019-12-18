@@ -1,50 +1,58 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.0.M3</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
 
-    <modelVersion>4.0.0</modelVersion>
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<project xmlns="http://maven.apache.org/POM/4.0.0"-->
+         <!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+         <!--xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">-->
+    <!--<parent>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-starter-parent</artifactId>-->
+        <!--<version>1.5.3.RELEASE</version>-->
+        <!--<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
+    <!--</parent>-->
 
-    <groupId>com.joy</groupId>
-    <artifactId>zpi-gateway-zuul</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <!--<modelVersion>4.0.0</modelVersion>-->
 
-    <dependencies>
+    <!--<groupId>com.zhou</groupId>-->
+    <!--<artifactId>zpi-gateway-zuul</artifactId>-->
+    <!--<version>1.0-SNAPSHOT</version>-->
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+    <!--&lt;!&ndash;<properties>&ndash;&gt;-->
+        <!--&lt;!&ndash;<java.version>1.8</java.version>&ndash;&gt;-->
+        <!--&lt;!&ndash;<spring-cloud.version>Edgware.SR3</spring-cloud.version>&ndash;&gt;-->
+    <!--&lt;!&ndash;</properties>&ndash;&gt;-->
 
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
-            <version>2.0.0.M2</version>
-        </dependency>
+    <!--<dependencies>-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-web</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-netflix-zuul</artifactId>-->
+            <!--&lt;!&ndash;<version>1.4.4.RELEASE</version>&ndash;&gt;-->
+        <!--</dependency>-->
 
+    <!--</dependencies>-->
 
-    </dependencies>
+    <!--&lt;!&ndash;<dependencyManagement>&ndash;&gt;-->
+        <!--&lt;!&ndash;<dependencies>&ndash;&gt;-->
+            <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+                <!--&lt;!&ndash;<groupId>org.springframework.cloud</groupId>&ndash;&gt;-->
+                <!--&lt;!&ndash;<artifactId>spring-cloud-dependencies</artifactId>&ndash;&gt;-->
+                <!--&lt;!&ndash;<version>${spring-cloud.version}</version>&ndash;&gt;-->
+                <!--&lt;!&ndash;<type>pom</type>&ndash;&gt;-->
+                <!--&lt;!&ndash;<scope>import</scope>&ndash;&gt;-->
+            <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;</dependencies>&ndash;&gt;-->
+    <!--&lt;!&ndash;</dependencyManagement>&ndash;&gt;-->
 
-    <build>
-        <plugins>
+    <!--<build>-->
+        <!--<plugins>-->
+            <!--<plugin>-->
+                <!--<groupId>org.springframework.boot</groupId>-->
+                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
+    <!--</build>-->
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
-                <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
-
-</project>
+<!--</project>-->
